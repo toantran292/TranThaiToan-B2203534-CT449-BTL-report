@@ -1,0 +1,97 @@
+\documentclass[a4paper]{article} % Create new a report
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc} % To use unicode
+\usepackage{mathptmx} % Time New Roman
+\usepackage[right=2cm,left=3cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage[fontsize=13pt]{scrextend}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{indentfirst}
+\usepackage{float} % Set position of image.
+\usepackage{tikz} % Create border
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{array} % Required for Table Column Text Alignment with Custom Widths
+\usepackage{titlesec} % Set font style
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tocloft}
+\usepackage{xparse}
+\usepackage{forloop}
+\usepackage{enumitem}
+\usepackage{lipsum}
+\usepackage{textcase}
+\usepackage{tabularray}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage[inkscape = inkscape -z -D, svgpath = fig/]{svg}
+
+\usetikzlibrary{calc}
+%Custom packages
+\usepackage{./config/heading}
+\usepackage{./config/fancy}
+\usepackage{./config/figure}
+
+\setlist{nolistsep}
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parskip}{6pt} % Spacing after
+\setlength{\parindent}{1cm}
+
+\newcommand{\setsection}[1]{\section*{\texorpdfstring{\MakeTextUppercase{#1}}{#1}}\addcontentsline{toc}{section}{\texorpdfstring{\MakeTextUppercase{#1}}{#1}}\markright{#1}}
+\newcommand{\setsubsection}[1]{\subsection*{\texorpdfstring{\MakeTextUppercase{#1}}{#1}}\addcontentsline{toc}{subsection}{\texorpdfstring{\MakeTextUppercase{#1}}{#1}}\markright{#1}}
+
+
+% Link to figure
+\usepackage[unicode]{hyperref}
+\newcommand{\myref}[1]{\textbf{\hyperref[#1]{Hình~\ref*{#1}}}}
+\newcommand{\myreftb}[1]{\textbf{\hyperref[#1]{Bảng~\ref*{#1}}}}
+
+\DefTblrTemplate{contfoot-text}{default}{Tiếp tục bên trang tiếp theo}
+\DefTblrTemplate{conthead-text}{default}{(Tiếp tục)}
+
+% =========================== START DOCUMENT ==================================
+\begin{document}
+
+\pagenumbering{roman} % Đánh số thứ tự la mã
+% \input{corverPage}
+
+% \input{thanks.tex}
+
+\input{list}
+
+
+
+
+\section*{DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}
+\phantomsection \addcontentsline{toc}{section}{DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}
+\begin{longtblr}[ label=none,entry=none,]{  row{1}={font=\bfseries,c}, hlines,vlines,colspec={X[1,c]X[2,c]X[2,c]}}
+  STT & Ký hiệu chữ viết tắt & Chữ viết đầy đủ \\
+  1   & VĐV                  & Vận động viên   \\
+  2   & HLV                  & Huấn luyện viên \\
+  3   & CSVC                 & Cơ sở vật chất
+\end{longtblr}
+\thispagestyle{empty}
+\newpage
+
+\pagenumbering{arabic}
+% \input{chap01/chap01.tex}
+% \newpage
+% \input{chap02/chap02.tex}
+% \newpage
+% \input{chap03/chap03.tex}
+% \newpage
+% \input{chap04/chap04.tex}
+% \newpage
+% \input{chap05/chap05.tex}
+% \newpage
+% \input{chap06/chap06.tex}
+% \newpage
+
+
+\phantomsection
+\addcontentsline{toc}{section}{TÀI LIỆU THAM KHẢO}
+\renewcommand{\refname}{TÀI LIỆU THAM KHẢO}
+\markright{Tài liệu tham khảo}
+\bibliographystyle{IEEEtran}
+\bibliography{reference}
+\end{document}
