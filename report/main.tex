@@ -57,33 +57,30 @@
 
 % \input{thanks.tex}
 
-\input{list}
+% \input{list}
 
 
 
 
-\section*{DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}
-\phantomsection \addcontentsline{toc}{section}{DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}
-\begin{longtblr}[ label=none,entry=none,]{  row{1}={font=\bfseries,c}, hlines,vlines,colspec={X[1,c]X[2,c]X[2,c]}}
-  STT & Ký hiệu chữ viết tắt & Chữ viết đầy đủ \\
-  1   & VĐV                  & Vận động viên   \\
-  2   & HLV                  & Huấn luyện viên \\
-  3   & CSVC                 & Cơ sở vật chất
-\end{longtblr}
-\thispagestyle{empty}
-\newpage
+% \section*{DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}
+% \phantomsection \addcontentsline{toc}{section}{DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}
+% \begin{longtblr}[ label=none,entry=none,]{  row{1}={font=\bfseries,c}, hlines,vlines,colspec={X[1,c]X[2,c]X[2,c]}}
+%   STT & Ký hiệu chữ viết tắt & Chữ viết đầy đủ \\
+%   1   & VĐV                  & Vận động viên   \\
+%   2   & HLV                  & Huấn luyện viên \\
+%   3   & CSVC                 & Cơ sở vật chất
+% \end{longtblr}
+% \thispagestyle{empty}
+% \newpage
 
 \pagenumbering{arabic}
-\input{chap01/chap01.tex}
-\newpage
-\input{chap02/chap02.tex}
-\newpage
+% \input{chap01/chap01.tex}
+% \newpage
+% \input{chap02/chap02.tex}
+% \newpage
 \input{chap03/chap03.tex}
-\newpage
-\input{chap04/chap04.tex}
-\newpage
-\input{chap05/chap05.tex}
-\newpage
+\include{chap04/chap04.tex}
+\include{chap05/chap05.tex}
 
 
 

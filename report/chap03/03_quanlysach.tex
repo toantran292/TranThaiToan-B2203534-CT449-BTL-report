@@ -1,0 +1,38 @@
+\phantomsection
+\subsubsection{Sơ đồ use case quản lý sách}
+
+\begin{figure}[H]
+  \centering
+  \includesvg[inkscapelatex=false, width=\linewidth]{images/diagram/UC_DN_DK_DX.svg}
+  \caption{Sơ đồ usecase đăng nhập, đăng ký, đăng xuất}
+\end{figure}
+
+\paragraph{Đặc tả use case đăng ký}\mbox{}
+\begin{longtblr}[
+  caption = {Đặc tả usecase đăng ký},
+  ]{
+  rowhead=1, hlines, vlines,
+  colspec={X[3,c]X[9,l]},
+  rows={1cm,m},
+  row{1}={font=\bfseries,c},
+  % col{1}={font=\bfseries,c}
+  }
+  Tóm tắt                            & Cho phép người dùng đăng ký tài khoản vào hệ thống                                               \\
+  Tác nhân                           & Người dùng.                                                                                      \\
+  Điều kiện tiên quyết               & Người dùng có kết nối internet                                                                   \\
+  \SetCell[r=10]{h} Kịch bản thường  & 1. Người dùng truy cập vào website.                                                              \\
+                                     & 2. Người dùng bấm vào chức năng đăng ký.                                                         \\
+                                     & 3. Hệ thống chuyển hướng đến trang đăng ký.                                                      \\
+                                     & 4. Người dùng nhập thông tin cần thiết vào biểu mẫu đăng ký như: email, mật khẩu.                \\
+                                     & 5. Sau khi nhập hoàn tất, người dùng ấn nút đăng ký.                                             \\
+                                     & 6. Hệ thống kiểm tra thông tin hợp lệ                                                            \\
+                                     & \hspace{2em}Có thể nhảy đến A1 - Thông tin vừa nhập không hợp lệ                                 \\
+                                     & 7. Nếu thông tin hợp lệ, hệ thống tiến hành lưu thông tin đăng ký.                               \\
+                                     & 8. Hệ thống thông báo cho người dùng đã đăng ký thành công và đăng nhập người dùng vào hệ thống. \\
+                                     & 9. Hệ thống chuyển hướng sang trang nhập thông tin cá nhân.                                      \\
+  \SetCell[r=4]{h} Kịch bản thay thế & A1 - Thông tin vừa nhập không hợp lệ                                                             \\
+                                     & Chuỗi A1 bắt đầu từ bước từ bước 6 của kịch bảng thường.                                         \\
+                                     & \hspace{2em}7. Hệ thống thông báo thông tin vừa nhập không hợp lệ.                               \\
+                                     & Trở về bước 4 của kịch bản thường.                                                               \\
+  Kết quả                            & Người dùng đăng ký thành công và được đăng nhập vào hệ thống
+\end{longtblr}

@@ -1,0 +1,32 @@
+\phantomsection
+\subsubsection{Sơ đồ use case tổng quát}
+\begin{figure}[H]
+  \centering
+  \includesvg[inkscapelatex=false, width=\linewidth]{images/diagram/UCTongQuat.svg}
+  \caption{Sơ đồ usecase tổng quát}
+  % \label{fig:sd-3}
+\end{figure}
+\noindent
+Đặc tả các chức năng của sơ đồ use case tổng quát
+\begin{longtblr}[
+  caption = {Đặc tả usecase tổng quát},
+  label = {tab:usecase8-spec}
+  ]{
+  rowhead=1, hlines, vlines,
+  colspec={X[1,c]X[2,c]X[9,l]},
+  rows={1cm,m},
+  row{1}={font=\bfseries,c}
+  }
+  STT & Tên use case                & Diễn giải                                                                                                            \\
+  1   & Đăng ký                     & Cho phép khách vãng lai có thể đăng ký tài khoản                                                                     \\
+  2   & Đăng nhập                   & Cho phép người dùng có tài khoản đăng nhập vào hệ thống                                                              \\
+  3   & Đăng xuất                   & Đăng xuất tài khoản khỏi hệ thống                                                                                    \\
+  4   & Tìm kiếm sách               & Tìm sách theo tên sách, tên tác giả, tên nhà xuất bản                                                                \\
+  5   & Xem thông tin chi tiết sách & Xem thông tin chi tiết của sách như tên, số lượng hiện có, tên tác giả, tên nhà xuất bản                             \\
+  6   & mượn sách                   & Cho phép người dùng có thể đặt mượn sách                                                                             \\
+  7   & Tra cứu lịch sử mượn sách   & Cho phép người dùng tra cứu lịch sử mượn sách                                                                        \\
+  8   & Quản lý nhà xuất bản        & Cho phép quản trị viên thêm, xóa, sửa, xem các nhà xuất bản có trong hệ thống                                        \\
+  9   & Quản lý sách                & Cho phép quản trị viên thêm, xóa, sửa, xem, chỉnh sửa số lượng, tra cứu lịch sử được mượn của sách có trong hệ thống \\
+  10  & Quản lý tác giả             & Cho phép quản trị viên thêm, xóa, sửa, xem các tác giả có trong hệ thống                                             \\
+  11  & Quản lý tài khoản           & Cho phép quản trị viên cấp, vô hiệu hóa, chỉnh sửa thông tin tài khoản
+\end{longtblr}
