@@ -1,0 +1,85 @@
+\phantomsection
+\subsubsection{Sơ đồ use case quản lý mượn sách}
+
+\begin{figure}[H]
+  \centering
+  \includesvg[inkscapelatex=false, width=\linewidth]{images/diagram/UCquanlymuonsach.svg}
+  \caption{Sơ đồ usecase đăng nhập, đăng ký, đăng xuất}
+\end{figure}
+
+\paragraph{Đặc tả use case xem danh mượn sách}\mbox{}
+\begin{longtblr}[
+  caption = {Đặc tả usecase xem danh sách mượn sách},
+  ]{
+  rowhead=1, hlines, vlines,
+  colspec={X[3,c]X[9,l]},
+  rows={1cm,m},
+  row{1}={font=\bfseries,c},
+  % col{1}={font=\bfseries,c}
+  }
+  Tóm tắt                            & cho phép quản trị viên xem danh sách mượn sách                                              \\
+  Tác nhân                           & Quản trị viên.                                                                                      \\
+  Điều kiện tiên quyết               & Quản trị viên đã đăng nhập bằng tài khoản quản trị                                                                   \\
+  \SetCell[r=3]{h} Kịch bản thường  & 1. quản trị viên chọn hiển thị chỉ mục quản lý mượn sách  trên thanh điều hướng.                                                              \\
+                                     & 2. Hệ thống lấy danh sách mượn sách trên cơ sở dữ liệu.                                                         \\
+                                     & 3. Giao diện hiển thị danh sách mà hệ thống lấy được.                                                      \\
+  \SetCell[r=1]{h} Kịch bản thay thế & 
+\end{longtblr}
+
+\paragraph{Đặc tả use case chỉnh sửa thông tin của mượn sách}\mbox{}
+\begin{longtblr}[
+  caption = {Đặc tả usecase chỉnh sửa thông tin của mượn sách},
+  ]{
+  rowhead=1, hlines, vlines,
+  colspec={X[3,c]X[9,l]},
+  rows={1cm,m},
+  row{1}={font=\bfseries,c},
+  % col{1}={font=\bfseries,c}
+  }
+  Tóm tắt                            & Cho phép quản trị viên chỉnh sửa các thông tin của mượn sách                                               \\
+  Tác nhân                           & Quản trị viên                                                                                     \\
+  Điều kiện tiên quyết               & Quản trị viên đã đăng nhập vào hệ thông bằng tài khoản quản trị                                                                  \\
+  \SetCell[r=7]{h} Kịch bản thường  & 1. Quản trị viên nhấn chọn vào mượn sách cần chỉnh sửa thông tin trong danh sách mượn sách.                                                              \\
+                                     & 2. Giao diện hiển thị các ô chứa các thông tin chi mượn sách đã chọn.                                                         \\
+                                     & 3. quản trị viên tiến hành chỉnh sửa thông tin mượn sách.                                                      \\
+                                     & 4. Quản trị viên nhấn nút gửi thông tin lên hệ thống.                \\
+                                     & 5. Hệ thống tiến thành lưu thông tin chỉnh sửa.                 \\
+                                     & \hspace{2em}Có thể nhảy đến A1 - Thông tin vừa nhập không hợp lệ    
+                                     \\
+                                     & 6. Giao diện chuyển sang danh sách mượn sách trước đó.                \\
+  \SetCell[r=4]{h} Kịch bản thay thế & A1 - Thông tin vừa nhập không hợp lệ                                                             \\
+                                     & Chuỗi A1 bắt đầu từ bước từ bước 5 của kịch bảng thường.                                         \\
+                                     & \hspace{2em}6. Hệ thống thông báo thông tin vừa nhập không hợp lệ.                               \\
+                                     & Trở về bước 3 của kịch bản thường.                                                               \\
+  Kết quả                            & Người dùng chỉnh sửa thông tin mượn sách thành công
+\end{longtblr}
+
+
+\paragraph{Đặc tả use case thêm mượn sách}\mbox{}
+\begin{longtblr}[
+  caption = {Đặc tả usecase chỉnh sửa thêm mượn sách},
+  ]{
+  rowhead=1, hlines, vlines,
+  colspec={X[3,c]X[9,l]},
+  rows={1cm,m},
+  row{1}={font=\bfseries,c},
+  % col{1}={font=\bfseries,c}
+  }
+  Tóm tắt                            & Cho phép quản trị thêm mượn sách vào hệ thống                                               \\
+  Tác nhân                           & Quản trị viên                                                                                     \\
+  Điều kiện tiên quyết               & Quản trị viên đã đăng nhập vào hệ thông bằng tài khoản quản trị                                                                  \\
+  \SetCell[r=7]{h} Kịch bản thường  & 1. Quản trị viên nhấn nút thêm thêm mượn sách.                                                              \\
+                                     & 2. Giao diện hiển thị các ô để nhập thông tin mượn sách muốn thêm.                                                         \\
+                                     & 3. Quản trị viên tiến hành nhập các thông tin mượn sách.                                                      \\
+                                     & 4. Quản trị viên nhấn nút gửi thông tin lên hệ thống.                \\
+                                    
+                                     & \hspace{2em}Có thể nhảy đến A1 - Thông tin vừa nhập không hợp lệ    
+                                     \\
+                                      & 5. Hệ thống tiến thành thêm mượn sách vào cơ sở dữ liệu.                 \\
+                                     & 6. Giao diện chuyển sang danh sách mượn sách trước đó trước đó.                \\
+  \SetCell[r=4]{h} Kịch bản thay thế & A1 - Thông tin vừa nhập không hợp lệ                                                             \\
+                                     & Chuỗi A1 bắt đầu từ bước từ bước 5 của kịch bảng thường.                                         \\
+                                     & \hspace{2em}6. Hệ thống thông báo thông tin vừa nhập không hợp lệ.                               \\
+                                     & Trở về bước 3 của kịch bản thường.                                                               \\
+  Kết quả                            & Người dùng tạo sách thành công
+\end{longtblr}

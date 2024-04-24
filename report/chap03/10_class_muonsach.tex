@@ -1,0 +1,17 @@
+\phantomsection
+\subsubsection{Mô tả lớp hóa đơn mượn sách}
+
+\begin{longtblr}[caption = {Mô tả lớp sách},
+label = {tab:class1-1-spec},]{
+width=1\linewidth, rowhead=1, hlines,vlines,
+colspec={X[2,c]X[1,c]X[1,c]X[1,c]X[1,c]X[1,c]X[1,c]X[3,c]},
+rows={1.5cm,m},
+row{1}={font=\bfseries,c}}
+Thuộc tính & Kiểu & Khóa chính & Mô tả & vai trò \\
+id & ObjectId & X & Id hóa đơn mượn sách & \\
+maDocGia & String & X & Mã độc giả mượn sách & \\
+maSach & String & X & Mã sách được mượn & \\
+ngayMuon & Date &  & Ngày mượn & \\
+ngayTra & Date &  & Ngày trả & \\
+
+\end{longtblr}
