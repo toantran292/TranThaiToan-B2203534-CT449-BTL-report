@@ -1,11 +1,13 @@
 \newcommand{\figmini}[4][.93]{%
   \par
-  \begin{minipage}{#1\linewidth}
-    \captionsetup{type=figure, width=#1\linewidth}
-    \includegraphics[width=\linewidth]{#2}
-    \caption{\centering #4}
-    \label{#3}
-  \end{minipage}%
+  \begin{center}
+    \begin{minipage}{#1\linewidth}
+      \captionsetup{type=figure, width=.93\linewidth}
+      \includegraphics[width=\linewidth]{#2}
+      \caption{\centering #4}
+      \label{#3}
+    \end{minipage}%
+  \end{center}
 }
 
 
